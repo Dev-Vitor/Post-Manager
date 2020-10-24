@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Welcome to the coolest blog in the world!!!</h1>
+    <div class="div-buttons">
+        <a href="/posts" class="a-primary"><button class="btn btn-success">
+                <i class="fas fa-book">
+                    Read the posts
+                </i>
+            </button></a>
+        <a href="/sendPost" class="a-second"><button class="btn btn-primary">
+                <i class="fas fa-pencil-alt">
+                    Write a post
+                </i>
+            </button></a>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 88vh;
+    }
+
+    .div-buttons {
+        margin: 50px;
+    }
+
+    .div-buttons .a-second {
+        margin-left: 20px;
+    }
+
+    .div-buttons .a-primary {
+        margin-right: 20px;
+    }
+
+    .btn {
+        padding: 20px 30px;
+        font-size: 30px;
+    }
+</style>

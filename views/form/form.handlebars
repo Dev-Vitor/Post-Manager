@@ -1,0 +1,97 @@
+<div class="div-title-post">
+    <h1>Write your post:</h1>
+</div>
+<form action="/add" method="POST" class="form">
+    <div class="container">
+        <div class="div-title div">
+            <h3>Title:</h3>
+            <input type="text" name="title" class="input-title" required>
+        </div>
+        <div class="div-content div">
+            <h3>Content:</h3>
+            {{!-- <input type="text" name="content" class="input-content" required> --}}
+            <textarea name="content" class="input-content" cols="30" rows="5"></textarea>
+        </div>
+        <div class="div-author div">
+            <h3>Write your name:</h3>
+            <input type="text" name="author" class="input-author" required>
+        </div>
+        <div class="div-submit div">
+            <button type="submit" class="input-submit btn btn-success">Send</button>
+        </div>
+    </div>
+</form>
+
+<style>
+    .form,
+    .container,
+    .div-title-post {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-title-post {
+        margin: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+        background-color: #fff;
+        border: 1px solid rgb(209, 205, 205);
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .input-title {
+        width: 800px;
+        height: 50px;
+        border-top:1px solid rgb(209, 205, 205);
+        border-left:1px solid rgb(209, 205, 205);
+        border-right:1px solid rgb(209, 205, 205);
+        border-bottom: 3px solid #28A745;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+
+    .input-author {
+        margin-left: 20px;
+        width: 800px;
+        height: 50px;
+        border: none;
+        border-top:1px solid rgb(209, 205, 205);
+        border-left:1px solid rgb(209, 205, 205);
+        border-right:1px solid rgb(209, 205, 205);
+        border-bottom: 3px solid #28A745;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+
+    .div {
+        margin: 20px;
+    }
+
+    .input-content {
+        width: 800px;
+        height: 600px;
+        border:1px solid rgb(209, 205, 205);
+        border-radius: 10px;
+        font-size: 30px;
+    }
+    .input-submit{
+        font-size: 30px;
+        padding: 10px 20px;
+        width: 200px;
+        border-radius: 10px;
+        margin: 50px 0px 20px 0px;
+    }
+    h1{
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 50px;
+        color: #28A745;
+    }
+</style>

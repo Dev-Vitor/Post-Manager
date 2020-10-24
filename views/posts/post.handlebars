@@ -1,0 +1,123 @@
+<div class="fluid-container">
+    <div class="div-title">
+        <h1 class="title">Posts:</h1>
+        <a href="/sendPost">
+        <button type="button" class="btn btn-success">
+            <i class="fas fa-pencil-alt"> Write a post</i>
+        </button>
+        </a>
+    </div>
+</div>
+<div class="container">
+    {{#each posts}}
+    <div class="bodyPosts">
+        <div class="div-title-posts">
+            <div class="div-title-posts-title">
+                <h2 class="title-posts">{{dataValues.title}}.</h2>
+            </div>
+            <div class="div-title-posts-icon">
+                <a href="/del-post/{{dataValues.id}}"><i class="fas fa-trash-alt bg-danger"></i></a>
+            </div>
+            <div class="div-title-posts-date">
+                <p class="creationDate">-Created in {{dataValues.createdAt}}</p>
+            </div>
+        </div>
+        <div class="div-content-posts">
+            <p class="text-posts">{{dataValues.content}}</p>
+        </div>
+        <div class="div-name-author">
+            <p class="name-author">-"{{dataValues.author}}"</p>
+        </div>
+        <hr>
+
+
+
+        {{/each}}
+    </div>
+</div>
+
+<style>
+    .fluid-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid rgb(209, 205, 205);
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+
+    .title {
+        margin-top: 20px;
+        font-size: 70px;
+    }
+
+    .container .div-title {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .btn-success {
+        margin: 10px 25px;
+    }
+
+    .div-title-posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+
+    .div-content-posts {
+        padding: 10px;
+    }
+
+    .div-name-author {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: grey;
+
+    }
+
+    .div-name-author p {
+        margin-right: 5px;
+    }
+
+    .creationDate {
+        color: grey;
+    }
+
+    .fa-trash-alt {
+        align-self: flex-end;
+        justify-self: flex-end;
+        margin: 10px;
+        border: 2px solid rgb(209, 205, 205);
+        border-radius: 25px;
+        padding: 10px 12px;
+        font-weight: bolder;
+        font-size: 25px;
+        color: black;
+    }
+
+    .div-title-posts-title {
+        width: 50%;
+    }
+
+    .div-title-posts-icon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+    }
+
+    .div-title-posts-date {
+        width: 100%;
+    }
+</style>
